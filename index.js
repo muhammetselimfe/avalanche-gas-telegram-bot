@@ -2,8 +2,9 @@ const axios = require("axios")
 const telegramBot = require("node-telegram-bot-api")
 require('dotenv').config()
 const token = process.env.API_TOKEN
-const URL = process.env.URL
+const IP = process.env.IP
 const bot = new telegramBot(token, {polling: true})
+const URL= `http://${IP}/ext/bc/C/rpc`
 
 setInterval(() => {
   axios({
